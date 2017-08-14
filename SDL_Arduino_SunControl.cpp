@@ -14,12 +14,12 @@ void SDL_Arduino_SunControl::begin() {
 }
 
 SDL_Arduino_SunControl::SDL_Arduino_SunControl(
-  uint8_t addr = SDL_Arduino_SunControl_INA3221Address,
-  uint8_t USBControlEnable = SDL_Arduino_SunControl_USBControlEnable,
-  uint8_t USBControlControl = SDL_Arduino_SunControl_USBControlControl,
-  uint8_t WatchDog_Done = SDL_Arduino_SunControl_WatchDog_Done,
-  uint8_t WatchDog_Wake = SDL_Arduino_SunControl_WatchDog_Wake,
-  uint8_t WatchDog_Use  = SDL_Arduino_SunControl_WatchDog_Use)
+  uint8_t addr /*= SDL_Arduino_SunControl_INA3221Address*/,
+  uint8_t USBControlEnable /*= SDL_Arduino_SunControl_USBControlEnable*/,
+  uint8_t USBControlControl /*= SDL_Arduino_SunControl_USBControlControl*/,
+  uint8_t WatchDog_Done /*= SDL_Arduino_SunControl_WatchDog_Done*/,
+  uint8_t WatchDog_Wake /*= SDL_Arduino_SunControl_WatchDog_Wake*/,
+  uint8_t WatchDog_Use /* = SDL_Arduino_SunControl_WatchDog_Use*/)
 {
 
 
@@ -41,7 +41,7 @@ SDL_Arduino_SunControl::SDL_Arduino_SunControl(
     pinMode( _WatchDog_Wake, OUTPUT);
   }
 
-  _ina3221 = SDL_Arduino_INA3221::SDL_Arduino_INA3221(_addr);
+  _ina3221 = SDL_Arduino_INA3221(_addr);
 
 
 }
